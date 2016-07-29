@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.ccit.model.StudentWork" table="t_StudentWork">
+		<id name="id">
+			<generator class="native" />
+		</id>
+		<many-to-one name="user" class="com.ccit.model.User" outer-join="false" lazy="false">
+		</many-to-one>
+		<property name="s_0" column="tp" />
+		<property name="s_1" column="scsj" />
+		<property name="s_2" column="wjm" />
+		<property name="s_3" column="s_title" />
+		<property name="s_4" column="s_score" />
+		<property name="s_5" column="s_bz" />
+	</class>
+</hibernate-mapping>

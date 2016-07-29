@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.ccit.model.ReplyGuestbook" table="t_ReplyGuestbook">
+		<id name="id">
+			<generator class="native" />
+		</id>
+		<many-to-one name="guestbook" class="com.ccit.model.Guestbook" outer-join="false" lazy="false">
+		</many-to-one>
+		<many-to-one name="user" class="com.ccit.model.User" outer-join="false" lazy="false">
+		</many-to-one>
+		<property name="s_0" column="r_title" />
+		<property name="s_1" column="r_time" />
+		<property name="s_2" column="r_bz" />
+	</class>
+</hibernate-mapping>

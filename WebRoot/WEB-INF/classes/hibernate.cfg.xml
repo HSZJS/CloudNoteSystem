@@ -1,0 +1,39 @@
+<!DOCTYPE hibernate-configuration PUBLIC
+ 	"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+ 	"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+ 
+<hibernate-configuration>
+ 	<session-factory>
+   <!--  <property name="hibernate.hbm2ddl.auto">create</property> -->
+ 		<property name="hibernate.connection.url">
+ 			jdbc:mysql://localhost/CloudNoteSystem
+ 		</property>
+ 		<property name="hibernate.connection.driver_class">
+ 			com.mysql.jdbc.Driver
+ 		</property>
+ 		<property name="hibernate.connection.username">root</property>
+ 		<property name="hibernate.connection.password">1</property>
+ 		<property name="hibernate.dialect">
+ 			org.hibernate.dialect.MySQLDialect
+ 		</property>
+ 		<property name="hibernate.show_sql">true</property>
+ 		<property name="hibernate.current_session_context_class">
+ 			thread
+ 		</property>
+ 		<property name="connection.useUnicode">true</property>
+ 		<property name="connection.characterEncoding">UTF-8</property>
+ 
+		<mapping resource="com/ccit/model/User.hbm.xml" />
+		<mapping resource="com/ccit/model/Course.hbm.xml" />
+ 		<mapping resource="com/ccit/model/CourseStudent.hbm.xml" />
+ 		<mapping resource="com/ccit/model/Guestbook.hbm.xml" />
+ 		<mapping resource="com/ccit/model/Notes.hbm.xml" />
+ 		<mapping resource="com/ccit/model/ReplyGuestbook.hbm.xml" />
+ 		<mapping resource="com/ccit/model/Tickling.hbm.xml" />
+ 		<mapping resource="com/ccit/model/StudentNote.hbm.xml" />
+ 		<mapping resource="com/ccit/model/StudentWork.hbm.xml" />
+ 		<mapping resource="com/ccit/model/TeacherFile.hbm.xml" />
+ 
+	</session-factory>
+</hibernate-configuration>
+ 
